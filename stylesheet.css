@@ -1,0 +1,443 @@
+/* colorz abc9f7 eba437 ffffff #000 */
+
+
+/* Navigation Menu */
+navigation-menu {
+  display: block;
+}
+
+/* Navigation Bar */
+
+
+
+.app-descript-1 {
+    color: #000;
+    display: flex;
+}
+
+.app-descript-2 {
+    color: #000;
+    display: flex;
+}
+
+/* color when u hover over nav bar */
+nav a:hover {
+  color: #f6de64;
+}
+
+div ul {
+  list-style: none;
+   margin-block-start: 0em;
+   margin-block-end: 0em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   padding-inline-start: 0px;
+}
+
+/* not sure if i need this */
+
+div li {
+  display: inline-block;
+  padding-top: 28px; // this is touchy
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px; /* spaces out the nav bar lettering */
+s}
+div li a {
+  font-family: roboto, sans-serif;
+  letter-spacing: 2px;
+  color: #5a9ffc;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.right-nav {
+  margin-right: 20px;
+  float: right;
+
+}
+
+.left-nav {
+  margin-left: 20px;
+  float: left;
+
+}
+
+div li a:hover {
+  color: #f6de64;
+}
+
+header {
+  height: 70px;
+}
+
+/* clears the space after the sides of each header! allows them to be on same
+   line/box space */
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+/* projects and stuffff */
+.site-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.site-container {
+  float:none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.site-content {
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 96%;
+}
+
+/* //generally */
+.project-covers {
+  padding-bottom: 0px;
+  padding-top: 43px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* //individual..allow for links */
+.project-cover {
+  margin-right: 0px;
+  width: -webkit-calc(50% - 0px);
+  display: block;
+  position: relative;
+}
+
+.link-transition a {
+  transition: background 0.2s ease, color 0.2s ease;
+  }
+.link-transition a svg {
+  transition: fill 0.2s ease;
+}
+
+
+.cover-content-container {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 1px;
+  position: relative;
+}
+
+.cover-content-container:hover .cover_img {
+  opacity: 0.3;
+}
+
+.cover-content-container:hover .inner-details {
+  opacity: 1;
+}
+
+.cover-image-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+/* // this confusingly refers to project covers */
+.cover-image {
+  border-radius: 0px;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%
+}
+/* // this confusingly refers to project covers */
+.cover-image::before {
+  padding-bottom: 78%;
+  content: "";
+  display: block;
+  width: 100%;
+}
+
+/* // this confusingly refers to project covers */
+/* this isnt doing anything */
+.cover-image::after {
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    border-radius: 0px;
+}
+
+/* // this confusingly refers to project covers */
+.cover {
+  left: 0px;
+  min-height: 100%;
+  position:absolute;
+  top: 0px;
+  width: 100%;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+/* // this confusingly refers to project covers */
+.cover_img {
+
+  height: calc(100% + 2px);
+  height: -moz-calc(100% + 2px);
+  height: -webkit-calc(100% + 2px);
+  left: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 2px);
+  vertical-align: top;
+  border: 0;
+
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.inside-image {
+  color: #fff;
+  background-color: #5a9ffc;
+  font-size: 100px;
+  margin-top: 125px;
+
+  font-style: italic;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.details-wrap {
+
+  left: 50%;
+  transform:translateX(-50%);
+  padding-bottom: 8%;
+  max-width: 100%;
+  padding-top: 8%;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 0.15s ease 0s;
+}
+
+.preserve-white {
+  white-space: pre-wrap;
+}
+
+.project-cover .details {
+  transition: background 0.2s ease; }
+
+.details {
+  align-items: center;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0);
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.inner-details {
+  padding-bottom: 0%;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 0%;
+
+  transition: .5s ease;
+ opacity: 0;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ text-align: center;
+
+
+  width: 100%;
+  overflow: hidden;
+}
+
+.inner-details::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+/* This puts the text on top and orgnaizes it */
+.title {
+    color: #ffffff;
+    float: none;
+    font-family: ftnk;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin: auto;
+    padding-bottom: 3px;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 0px;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+
+}
+
+/* first container, holds the navigation */
+.container-1 {
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
+
+.container-2 {
+  height: 250px;
+  width: 100%;
+  background-color: #5a9ffc;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  overflow: auto;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+
+/* footer css */
+/* .footer {
+  background-color: #5a9ffc;
+  height: 200px;
+  margin-bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+} */
+
+/* for the brand name */
+.logo {
+  font-family: roboto, sans-serif;
+  letter-spacing: 2px;
+  color: #5a9ffc;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0;
+  position: absolute;
+  padding-top: 72px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+}
+
+.logo-wrap {
+  flex: 1;
+}
+
+/* responsive log textlink */
+.logo:hover {
+  color: #f6de64;
+
+}
+
+/* splits the footer in two */
+.column {
+  float: left;
+  width: 50%;
+  height: auto;
+}
+
+.about-page-right {
+  padding-top: 30px;
+  float: right;
+  width: 47%;
+  height: auto;
+  font-size: 20px;
+}
+.about-page-left {
+  padding-top: 40px;
+  float: left;
+  width: 49%;
+  height: auto;
+  font-size: 20px;
+}
+
+.about-name {
+  font-size: 40px;
+  font-weight: 400;
+
+}
+
+.about-links {
+  font-size: 12px;
+  padding-top: 10px;
+  /* padding-bottom: 10px; */
+  font-weight: 300;
+  color: grey;
+  padding-left: 1px;
+}
+
+.about-descript {
+  padding-top: 0px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 2;
+  width: 80%;
+  padding-left: 0px;
+  color: #000000;
+}
+
+.about-pic {
+  max-width: 100%;
+  height: auto;
+}
+
+/* makes it so there can be two columns on the same "line"/x-axis */
+/* .footer:after {
+  content: "";
+  display:table;
+  clear:both;
+} */
+
+/* footer link styling */
+/* .footer a {
+  font-family: roboto, sans-serif;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* color when u hover over footer links */
+.footer a:hover {
+  color: #f6de64;
+} */
