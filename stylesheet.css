@@ -243,6 +243,13 @@ header::after {
   text-align: center;
 }
 
+.paragraph {
+  font-size: 25px;
+  width: 50%;
+  margin: 20px;
+  padding: 20px;
+}
+
 .details-wrap {
 
   left: 50%;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Sublet University Contact Us </title>
+    <title> Sublet University Submit Your House </title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <!-- <link rel="shortcut icon" type="tab-icon" href="favicon.ico"> -->
       <style>
@@ -89,6 +89,27 @@
   </head>
 
   <body>
+  <script language="javascript">
+      
+      function validate(){
+          if(document.getElementById("zipcode").value.toString() == "02144" || document.getElementById("zipcode").value.toString() == "02155")
+          {
+              alert("Thank you for your interest in our services. We will review your submission, and get back to you as soon as possible.")
+              return true;
+          }else{
+              alert("House must be in zip code 02155 or 02144 to be eligible for listing.")
+              return false;
+          }
+      }
+      
+      function calculate(){
+          var prof = 0.9 * document.getElementById("price").value;
+          var fin = prof.toFixed(2);
+          document.getElementById("profit").value = "$" + fin;
+      }
+    </script>
+    
+    
     <header>
       <div class= "container-1">
         <a href = "index.html">
@@ -141,24 +162,39 @@
     sizes="(max-width: 540px) 100vw, (max-width: 768px)
     50vw, calc(1200px / 2)">
     <div class = "inside-image-contact">
-      Contact Us
+      Submit a Room
     </div>
   </div>
   
 <div align="center">
     
     <div class="heading">
-        Fill out this form, and we'll reach out to you as soon as possible!
+        Submitting a Room for Subletting
     </div> 
-    <form>
+    <div class="paragraph">
+        <b>If you have a room that you would like to sublet, please let us know in the form below.
+        In order for your room to qualify for our services, it must be located in the 02155 or 02144 zip codes. </b><br><br>
+        <i> Disclaimer: we take a 10% cut from the listing price in order to maintain our services. When submitting a 
+            listing price in the form, we will automatically calculate your estimated profits. </i>
+        
+    </div>
+        
+    <form name="subForm" onsubmit="return validate()">
       Name:<br>
       <input type="text" name="Name" required="true"> <br><br><br>
       Email:<br>
       <input type="text" name="Email" required="true"> <br><br><br>
       Phone Number (optional):<br>
       <input type="number" name="Number"> <br><br><br>
-      Reason for Contacting:<br>
-      <input type="text" name="information" required="true"> <br><br><br>
+      House's Street Address:<br>
+      <input type="text" name="Email" required="true"> <br><br><br>
+      Zip Code:<br>
+      <input type="number" name="zipcode" id="zipcode" required="true"> <br><br><br>
+      Listing Price (Monthly Rent) :<br>
+      <input type="number" name="price" id="price" required="true" onchange="calculate()"> <br><br><br>
+      Your Profit (Monthly) :<br>
+      <input type="text" name="profit" id="profit" value="$0"> <br><br><br>
+      
       <input type="submit" value="Submit"> <br><br>
     </form>
 </div>
