@@ -226,6 +226,23 @@ header::after {
   text-align: center;
 }
 
+.inside-image-contact {
+  color: #fff;
+  background-color: #5a9ffc;
+  font-size: 100px;
+  font-size: 8vw;
+  margin-top: 50px;
+
+  font-style: italic;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .details-wrap {
 
   left: 50%;

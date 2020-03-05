@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Sublet University Contact Us </title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- <link rel="shortcut icon" type="tab-icon" href="favicon.ico"> -->
+      <style>
+        html, body {
+          font-family: roboto, sans-serif;
+          letter-spacing: 2px;
+
+          margin: 0px;
+          height: 100%;
+          width: 100%;
+        }
+        mark {
+          background-color: #377eeb;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+        #coverphoto img {
+          width:100%;
+        }
+        
+        form { 
+        color: #377eeb;
+        }
+        
+        input[type=text] {
+        width:30%;
+        padding: 12px 180px;
+        border: none;
+        border-bottom: 2px solid #377eeb;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        }
+        input[type=text]:focus {
+            border: 3px solid #555;
+            background-color: lightblue;
+        }
+        
+        input[type=number] {
+        width:30%;
+        padding: 12px 180px;
+        border: none;
+        border-bottom: 2px solid #377eeb;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        }
+        input[type=number]:focus {
+            border: 3px solid #555;
+            background-color: lightblue;
+        }
+        
+        input[type=submit] {
+          background-color: #377eeb;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        
+        .heading {
+            font-family: roboto, sans-serif;
+            letter-spacing: 2px;
+            margin: 75px;
+            padding: 10px;
+            width: 50%;
+            color: white;
+            background-color: #5a9ffc;
+            font-size: 50px;
+            font-size: 4vw;
+            font-style: italic;
+        }
+        
+        .coverp {
+            /* width:100%; */
+            top: 50%;
+        }
+      
+
+      </style>
+  </head>
+
+  <body>
+    <header>
+      <div class= "container-1">
+        <a href = "index.html">
+          <h1 class = "logo">
+          Sublet University
+          </h1>
+        </a>
+
+
+       <!-- right nav! -->
+      <div>
+        <nav>
+          <ul>
+            <li class="right-nav"><a href="signup.html">
+              Sign Up </a></li>
+            <li class="right-nav"><a href="login.html">
+              Log In </a></li>
+            <li class="right-nav"><a href="contact.html">
+              Contact Us </a></li>
+              <li class="right-nav"><a href="browse.html">
+                Browse </a></li>
+          </ul>
+        </nav>
+        </div>
+
+        <!-- left nav -->
+        <div>
+          <nav>
+          <ul>
+            <li class="left-nav">
+              <a href="https://instagram.com/sublet.u" target="_blank">
+                Instagram </a> </li>
+            <li class="left-nav">
+              <a href="https://www.linkedin.com/in/" target="_blank">
+                LinkedIn
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+  
+  <div id="coverphoto" class="coverp">
+    <img src=
+    "school_aerial.jpg"
+    sizes="(max-width: 540px) 100vw, (max-width: 768px)
+    50vw, calc(1200px / 2)">
+    <div class = "inside-image-contact">
+      Contact Us
+    </div>
+  </div>
+  
+<div align="center">
+    
+    <div class="heading">
+        Fill out this form, and we'll reach out to you as soon as possible!
+    </div> 
+    <form>
+      Name:<br>
+      <input type="text" name="Name" required="true"> <br><br><br>
+      Email:<br>
+      <input type="text" name="Email" required="true"> <br><br><br>
+      Phone Number (optional):<br>
+      <input type="number" name="Number"> <br><br><br>
+      Reason for Contacting:<br>
+      <input type="text" name="information" required="true"> <br><br><br>
+      <input type="submit" value="Submit"> <br><br>
+    </form>
+</div>
+  </body>
+</html>
