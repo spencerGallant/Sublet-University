@@ -88,7 +88,15 @@
       </style>
   </head>
 
- <body>
+  <body>
+    <script language="javascript">
+      function thank_you() {
+        alert("Thank you for contact us. We will reach out shortly.");
+        return true;
+      }
+    //  
+    </script>
+
     <header>
       <div class= "container-1">
         <a href = "index.html">
@@ -126,6 +134,7 @@
         </div>
       </div>
     </header>
+
     
   
   <div id="coverphoto" class="coverp">
@@ -143,7 +152,7 @@
     <div class="heading">
         Fill out this form, and we'll reach out to you as soon as possible!
     </div> 
-    <form>
+    <form action="index.html" onsubmit="return thank_you()">
       Name:<br>
       <input type="text" name="Name" required="true"> <br><br><br>
       Email:<br>
