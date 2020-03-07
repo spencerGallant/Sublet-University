@@ -40,7 +40,7 @@ div li {
   display: inline-block;
   padding-top: 28px; /*// this is touchy*/
   position: relative;
- /* font-weight: 600;*/
+  font-weight: 600;
   letter-spacing: 1px; /* spaces out the nav bar lettering */
 }
 div li a {
