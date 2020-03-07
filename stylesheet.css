@@ -38,11 +38,11 @@ div ul {
 
 div li {
   display: inline-block;
-  padding-top: 28px; // this is touchy
+  padding-top: 28px; /*// this is touchy*/
   position: relative;
-  font-weight: 600;
+ /* font-weight: 600;*/
   letter-spacing: 1px; /* spaces out the nav bar lettering */
-s}
+}
 div li a {
   font-family: roboto, sans-serif;
   letter-spacing: 2px;

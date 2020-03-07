@@ -17,6 +17,102 @@
         * {
           box-sizing: border-box;
         }
+        div li {
+          display: list-item;
+          padding-top: 0px; /*// this is touchy*/
+          font-weight: normal;
+
+        }
+
+        .two_houses {
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          justify-content: center;
+          text-align: center;
+          align-items: start;
+        }
+
+        .two_houses > div {
+          box-shadow: 0 10px 12px 0 rgba(0, 0, 0, .5);
+          max-width: 550px;
+          margin: 15px;
+          text-align: center;
+          font-family: arial;
+        }
+
+        .two_houses .next{
+          display: inline-block;
+          margin-right: 5px;
+          float: right;
+        }
+
+        .two_houses .prev{
+          display: inline-block;
+          margin-left: 5px;
+          float: left;
+        }
+        
+        .price {
+          color: grey;
+          font-size: 22px;
+        }
+
+        .features {
+          font-weight: normal;
+          display: inline-block;
+          list-style-type: circle;
+          list-style: none;
+          list-style-position: inside;
+          margin-left: auto;
+          text-align: left;
+        }
+
+        .features_right {
+          font-weight: normal;
+          display: inline-block;
+          list-style-type: circle;
+          list-style: none;
+          list-style-position: inside;
+          margin-right: auto;
+          margin-left: 40px;
+          text-align: left;
+        }
+
+        .purchase {
+          box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0);
+          cursor: pointer;
+          border-radius: 25px;
+          background-color: #fff;
+          border-color: #000;
+          color: black;
+          font-weight: normal;
+          font-size: 30px;
+          width: 50%;
+        }
+
+        .purchase:hover {
+          box-shadow: 0 10px 12px 0 rgba(0, 0, 0, .3);
+          background-color: #000;
+          color: white;          
+        }
+
+        .scroll {
+          box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0);
+          cursor: pointer;
+          border-radius: 25px;
+          background-color: #fff;
+          border-color: #000;
+          color: black;
+          font-weight: normal;
+          font-size: 10px;
+        }
+
+        .scroll:hover {
+          box-shadow: 0 10px 12px 0 rgba(0, 0, 0, .3);
+          background-color: #000;
+          color: white;
+        }
 
       </style>
   </head>
@@ -35,8 +131,8 @@
       <div>
         <nav>
           <ul>
-            <li class="right-nav"><a href="signup.html">
-              Sign Up </a></li>
+            <li class="right-nav"><a href="about.html">
+              About </a></li>
             <li class="right-nav"><a href="login.html">
               Log In </a></li>
             <li class="right-nav"><a href="contact.html">
@@ -67,54 +163,218 @@
       </div>
     </header>
 
-<!--
-      Use this for a cool title block below the nav bar!
 
-      <div class="container-2">
-        <div class="centered">
-          projects
-        </div>
+    <script language="javascript">
+
+      var num_image = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+      function next_photo(slider, image_arr, num){
+        if(num_image[num] == (image_arr-1)) num_image[num] = 0;
+
+        else num_image[num] = num_image[num] + 1;
+
+        var image = document.getElementById(slider);
+        image.innerHTML = '<img src=house' + (num+1) +"/" + (num_image[num]+1) + '.png style="width:100%">';
+      }
+
+      function prev_photo(slider, image_arr, num){
+        if(num_image[num] == 0) num_image[num] = image_arr-1;
+
+        else num_image[num] = num_image[num] - 1;
+
+        var image = document.getElementById(slider);
+        image.innerHTML = '<img src=house' + (num+1) +"/" + (num_image[num]+1) + '.png style="width:100%">';
+      }
+
+
+
+    </script>
+
+    <h2 style="text-align:center">Houses (1 room each)</h2>
+     
+  
+    <div class="two_houses">
+      <div>
+        <div class="image" id="home1"> <img src="house1/1.png" style="width:100%"> </div>
+        <div class = "prev"> <button button class = "scroll" onclick="prev_photo('home1', 5, 0)">BACK</button> </div>
+        <div class = "next"> <button button class = "scroll" onclick="next_photo('home1', 5, 0)">NEXT</button> </div>
+        <h1>37 Chetwynd Road, Somerville MA</h1>
+        <p class="price">$650 per month</p>
+         <ul class="features">
+            <li style="font-weight: bold; font-size: 20px;"> Features </li>
+            <li> Large room</li>
+            <li> Outside porch </li>
+            <li> Washer/dryer included </li>
+          </ul>
+          <ul class="features_right">
+            <li style="font-weight: bold; font-size: 20px;"> Drawbacks </li>
+            <li> No furniture </li>
+            <li> No kitchen </li>
+            <li> 3 other residents</li>
+          </ul>
+        <p><button class="purchase" onclick="location.href='buy_house.html';">Add to Cart</button></p>
       </div>
--->
 
-
-      <div class="site-wrap">
-        <div class="site-container">
-          <div class="site-content">
-            <main>
-              <section class="project-covers"
-              data-content="page.gallery.covers">
-                <a class="project-cover project-cover-touch hold-space"
-                 href="https://google.com"
-                  data-context="pages">
-                <!--  -->
-                  <div class="cover-content-container">
-                    <div class="cover-image-wrap">
-                      <div class="cover-image">
-                        <div class="cover cover-normal">
-                          <img class="cover_img lazy image-loaded" src=
-                          "home.jpg"
-                          sizes="(max-width: 540px) 100vw, (max-width: 768px)
-                          50vw, calc(1200px / 2)">
-                          <!-- not sure how necessary^ -->
-                        </div>
-                      </div>
-                    </div>
-                      <div class="details-wrap">
-                        <div class="details">
-                          <div class="inner-details">
-                            <div class="title preserve-white">
-                              <!-- needs a title, title doesnt work -->
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </section>
-            </main>
-          </div>
-        </div>
+      <div>
+        <div id="home2"> <img src="house2/1.png" style="width:100%"></div>
+        <div class = "prev"> <button  class = "scroll" onclick="prev_photo('home2', 7, 1)">BACK</button> </div>
+        <div class = "next"> <button  class = "scroll" onclick="next_photo('home2', 7, 1)">NEXT</button> </div>
+        <h1>24 Boston Ave, Somerville MA</h1>
+        <p class="price">$725 per month</p>
+        <ul class="features">
+          <li style="font-weight: bold; font-size: 20px;"> Features </li>
+          <li> Convenient location</li>
+          <li> Parking lot </li>
+          <li> Kitchen included </li>
+        </ul>
+        <ul class="features_right">
+          <li style="font-weight: bold; font-size: 20px;"> Drawbacks </li>
+          <li> Obstructed view </li>
+          <li> No washer/dryer </li>
+          <li> 5 other residents</li>
+        </ul>
+        <p><button class="purchase" onclick="location.href='buy_house.html';">Add to Cart</button></p>
       </div>
+    </div>
+
+    <div class="two_houses">
+      <div class="house">
+        <div id="home3"> <img src="house3/1.png" style="width:100%"> </div>
+        <div class = "prev"> <button  class = "scroll" onclick="prev_photo('home3', 6, 2)">BACK</button> </div>
+        <div class = "next"> <button  class = "scroll" onclick="next_photo('home3', 6, 2)">NEXT</button> </div>
+        <h1>13 Kennedy Road, Somerville MA</h1>
+        <p class="price">$850 per month</p>
+        <ul class="features">
+          <li style="font-weight: bold; font-size: 20px;"> Features </li>
+          <li> Back yard with grill </li>
+          <li> Large living room </li>
+          <li> Private bathroom </li>
+          <li> Kitchen </li>
+        </ul>
+        <ul class="features_right">
+          <li style="font-weight: bold; font-size: 20px;"> Drawbacks </li>
+          <li> Live with a family of 4 </li>
+          <li> Two young kids </li>
+          <li> No washer/dryer </li>
+          <li> Room is on the smaller side</li>
+        </ul>
+        <p><button class="purchase" onclick="location.href='buy_house.html';">Add to Cart</button></p>
+      </div>
+
+      <div class="house">
+        <div id="home4"> <img src="house4/1.png" style="width:100%"></div>
+        <div class = "prev"> <button  class = "scroll" onclick="prev_photo('home4', 7, 3)">BACK</button> </div>
+        <div class = "next"> <button  class = "scroll" onclick="next_photo('home4', 7, 3)">NEXT</button> </div>
+        <h1>12 Fairmont Street, Medford MA</h1>
+        <p class="price">$700 per month</p>
+        <ul class="features">
+          <li style="font-weight: bold; font-size: 20px;"> Features </li>
+          <li> Convenient location</li>
+          <li> Nice view </li>
+          <li> Utilities included </li>
+          <li> Kitchen included </li>
+        </ul>
+        <ul class="features_right">
+          <li style="font-weight: bold; font-size: 20px;"> Drawbacks </li>
+          <li> No washer/dryer </li>
+          <li> Shared bathroom </li>
+          <li> Stairs to room</li>
+          <li> 4 other residents</li>
+        </ul>
+        <p><button class="purchase" onclick="location.href='buy_house.html';">Add to Cart</button></p>
+      </div>
+    </div>
+
+    <div class="two_houses">
+      <div class="house">
+        <div id="home5"> <img src="house5/1.png" style="width:100%"> </div>
+        <div class = "prev"> <button  class = "scroll" onclick="prev_photo('home5', 6, 4)">BACK</button> </div>
+        <div class = "next"> <button  class = "scroll" onclick="next_photo('home5', 6, 4)">NEXT</button> </div>
+        <h1>41 College Ave, Medford MA</h1>
+        <p class="price">$635 per month</p>
+        <ul class="features">
+          <li style="font-weight: bold; font-size: 20px;"> Features </li>
+          <li> Convenient location</li>
+          <li> Furniture included </li>
+          <li> Kitchen included </li>
+        </ul>
+        <ul class="features_right">
+          <li style="font-weight: bold; font-size: 20px;"> Drawbacks </li>
+          <li> No washer/dryer </li>
+          <li> Shared bathroom </li>
+          <li> 4 other residents</li>
+        </ul>
+        <p><button class="purchase" onclick="location.href='buy_house.html';">Add to Cart</button></p>
+      </div>
+
+      <div class="house">
+        <div id="home6"> <img src="house6/1.png" style="width:100%"></div>
+        <div class = "prev"> <button  class = "scroll" onclick="prev_photo('home6', 7, 5)">BACK</button> </div>
+        <div class = "next"> <button  class = "scroll" onclick="next_photo('home6', 7, 5)">NEXT</button> </div>
+        <h1>29 Winston Road, Medford MA</h1>
+        <p class="price">$650 per month</p>
+        <ul class="features">
+          <li style="font-weight: bold; font-size: 20px;"> Features </li>
+          <li> Storage room</li>
+          <li> Kitchen included </li>
+          <li> Walk in closets </li>
+        </ul>
+        <ul class="features_right">
+          <li style="font-weight: bold; font-size: 20px;"> Drawbacks </li>
+          <li> No washer/dryer </li>
+          <li> 5 minute walk from campus </li>
+          <li> 2 other residents</li>
+        </ul>
+        <p><button class="purchase" onclick="location.href='buy_house.html';">Add to Cart</button></p>
+      </div>
+    </div>
+
+    <div class="two_houses">
+      <div class="house">
+        <div id="home7"> <img src="house7/1.png" style="width:100%"> </div>
+        <div class = "prev"> <button  class = "scroll" onclick="prev_photo('home7', 6, 6)">BACK</button> </div>
+        <div class = "next"> <button  class = "scroll" onclick="next_photo('home7', 6, 6)">NEXT</button> </div>
+        <h1>30 winston Road, Medford MA</h1>
+        <p class="price">$700 per month</p>
+        <ul class="features">
+          <li style="font-weight: bold; font-size: 20px;"> Features </li>
+          <li> Convenient location</li>
+          <li> Private bathroom </li>
+          <li> Shared kitchen</li>
+        </ul>
+        <ul class="features_right">
+          <li style="font-weight: bold; font-size: 20px;"> Drawbacks </li>
+          <li> No washer/dryer</li>
+          <li> Apartment complex </li>
+          <li> No free parking </li>
+        </ul>
+        <p><button class="purchase" onclick="location.href='buy_house.html';">Add to Cart</button></p>
+      </div>
+
+      <div class="house">
+        <div id="home8"> <img src="house8/1.png" style="width:100%"></div>
+        <div class = "prev"> <button class = "scroll" onclick="prev_photo('home8', 7, 7)">BACK</button> </div>
+        <div class = "next"> <button class = "scroll" onclick="next_photo('home8', 7, 7)">NEXT</button> </div>
+        <h1>7 Disking Road, Medford MA</h1>
+        <p class="price">$550 per month</p>
+        <ul class="features">
+          <li style="font-weight: bold; font-size: 20px;"> Features </li>
+          <li> Large room</li>
+          <li> Comes furnished </li>
+          <li> Kitchen included </li>
+        </ul>
+        <ul class="features_right">
+          <li style="font-weight: bold; font-size: 20px;"> Drawbacks </li>
+          <li> No parking space</li>
+          <li> 4 other resudents </li>
+          <li> 7 minute walk from campus </li>
+        </ul>
+        <p><button class="purchase" onclick="location.href='buy_house.html';">Add to Cart</button></p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">Have a room you want to sublet?</h2>
+    <div style="text-align: center;"><button class="purchase" style="align-items: center;" onclick="location.href='submit-house.html';">Submit a Room</button></div> <br><br>
+
   </body>
 </html>
