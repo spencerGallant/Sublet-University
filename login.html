@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Sublet University Login </title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- <link rel="shortcut icon" type="tab-icon" href="favicon.ico"> -->
+      <style>
+        html, body {
+          font-family: roboto, sans-serif;
+          letter-spacing: 2px;
+
+          margin: 0px;
+          height: 100%;
+          width: 100%;
+        }
+        mark {
+          background-color: #377eeb;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+        #coverphoto img {
+          width:100%;
+        }
+        
+        form { 
+        color: #377eeb;
+        }
+        
+        input[type=text] {
+          width:30%;
+          padding: 12px 90px;
+          border: none;
+          border-bottom: 2px solid #377eeb;
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+          outline: none;
+        }
+
+        input[type=text]:focus {
+            border: 3px solid #555;
+            background-color: lightblue;
+        }
+        
+        input[type=number] {
+          width:30%;
+          padding: 12px 180px;
+          border: none;
+          border-bottom: 2px solid #377eeb;
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+          outline: none;
+        }
+
+        input[type=number]:focus {
+            border: 3px solid #555;
+            background-color: lightblue;
+        }
+        
+        input[type=submit] {
+          background-color: #377eeb;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        
+        .heading {
+            font-family: roboto, sans-serif;
+            letter-spacing: 2px;
+            margin: 75px;
+            padding: 10px;
+            width: 50%;
+            color: white;
+            background-color: #5a9ffc;
+            font-size: 50px;
+            font-size: 4vw;
+            font-style: italic;
+        }
+        
+        .coverp {
+            /* width:100%; */
+            top: 50%;
+        }
+      
+
+      </style>
+  </head>
+
+  <body>
+    <script language="javascript">
+      function newDoc() {
+        alert("Thank you for signing up with Sublet University! Press CLOSE to browse");
+        return true;
+      }
+    //  
+    </script>
+
+    <header>
+      <div class= "container-1">
+        <a href = "index.html">
+          <h1 class = "logo">
+          Sublet University
+          </h1>
+        </a>
+
+
+       <!-- right nav! -->
+      <div>
+        <nav>
+          <ul>
+             <li class="right-nav"><a href="contact.html">
+              Contact Us </a></li>
+              <li class="right-nav"><a href="login.html">
+              Log In </a></li>
+              <li class="right-nav"><a href="about.html">
+                About </a></li>
+         
+          </ul>
+        </nav>
+        </div>
+
+        <!-- left nav -->
+        <div>
+          <nav>
+          <ul>
+           <li class="left-nav"><a href="submit-house.html">
+                Submit A Room </a></li>
+           <li class="left-nav"> <a href="browse.html">
+                Browse </a></li>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+  
+<div align="center">
+    
+    <div class="heading">
+        Fill out this form to buy a house!
+    </div> 
+    <p> Fill out this form create an account with us</p>
+    <form action="browse.html" onsubmit='return newDoc()'>
+      Name:<br>
+      <input type="text" name="Name" required="true" style="width: 50%;"> <br><br><br>
+      Email:<br>
+      <input type="text" name="Email" required="true" style="width: 50%;"> <br><br><br>
+      Password:<br>
+      <input type="text" name="Password" required="true" style="width: 50%;"> <br><br><br>
+  <!--     Questions, comments, concerns:<br>
+      <input type="text" name="information" required="true" style="width: 50%;"> <br><br><br> -->
+      <input type="submit" value="Submit"> <br><br>
+    </form>
+</div>
+
+<script>
+
+</script>
