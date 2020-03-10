@@ -3,6 +3,10 @@
   <head>
     <title> Sublet University </title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"> </script>
     <!-- <link rel="shortcut icon" type="tab-icon" href="favicon.ico"> -->
       <style>
         html, body {
@@ -18,12 +22,13 @@
         * {
           box-sizing: border-box;
         }
+
         #coverphoto img {
           width:100%;
           margin-bottom: 0px;
           padding-bottom: 0px;
         }
-          #title {
+        #title {
           font-size: 60px;
           font-weight: 500;
           color: #fff;
@@ -37,6 +42,15 @@
         #arrow {
           background-color: transparent;
         }
+        #arrow a {
+          color: #f6de64;
+          text-decoration: none;
+        }
+
+        #arrow a:hover {
+          color: #fc5a5a;
+        }
+
         #welcome {
           background-color: #5a9ffc;
           font-style: normal;
@@ -118,23 +132,48 @@
 
 
 <!-- container 2 -->
-      <div id="coverphoto">
+         <div id="coverphoto">
         <img src=
         "college.jpg"
         sizes="(max-width: 540px) 100vw, (max-width: 768px)
         50vw, calc(1200px / 2)">
-        <div class = "inside-image">
+        <div class = "inside-image" style="top: 30%;">
           <div id = "welcome">
-          &nbsp; Welcome &nbsp; 
+            &nbsp; Welcome &nbsp;
           </div>
           <div id = "arrow">
-            <span style = "font-style: normal;"> &#10549; </span>
+            <a href ="#container-3" style="text-decoration: none;">
+            <span style = "font-style: normal;"> &#11015;</span>
+            </a>
           </div>
         </div>
       </div>
 
-  <div style="background-color: #5a9ffc; text-align: center; display: flex;"
-     class="container-3">
+
+      <script>
+        jQuery($ => {
+        // The speed of the scroll in milliseconds
+        const speed = 800;
+
+        $('a[href*="#"]')
+        .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
+        .unbind('click.smoothScroll')
+        .bind('click.smoothScroll', event => {
+          const targetId = event.currentTarget.getAttribute('href').split('#')[1];
+          const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              event.preventDefault();
+              $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed);
+              }
+            });
+        });
+        </script>
+
+
+      <!-- the app imagery and class names can all be changed!
+          They're fillers-->
+    <div style="background-color: #5a9ffc; text-align: center; display: flex;"
+     id="container-3">
       <div class ="column" style="float: left;">
 
         <img src="sublet-logo-beige.jpg" style="width: 100%;">
@@ -157,10 +196,9 @@
         <br>
         <br>
 
-        <a href="register.html"> <button type="button"> Register </button>
+        <a href="login.html"> <button type="button"> Register </button>
         </div>
       </div>
     </div>
   </body>
 </html>
-
