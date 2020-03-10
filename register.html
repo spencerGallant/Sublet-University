@@ -91,10 +91,22 @@
   <body>
     <script language="javascript">
       function newDoc() {
+        email = document.form1.Email.value;
+        email = email.toLowerCase();
+        if(!email.includes(".edu")) {
+          alert("Please make sure you use a '.edu' email address");
+          return false;
+        }
+        school = document.form1.School.value;
+        school = school.toLowerCase();
+        if(!school.includes("tufts")) {
+          alert("Thank you for signing up with Sublet University! Please note that we currently only have listings near Tufts University.");
+          return true;
+        }
         alert("Thank you for signing up with Sublet University! Press CLOSE to browse");
         return true;
       }
-    //  
+    
     </script>
 
     <header>
@@ -144,12 +156,14 @@
     <div class="heading">
        Register for Sublet University! 
     </div> 
-    <p> Fill out this form to register with us</p>
-    <form action="browse.html" onsubmit='return newDoc()'>
+    <p> Fill out this form to register with us! Get updates on when houses become available near your school and other information about Sublet University!</p>
+    <form action="browse.html" name="form1" onsubmit='return newDoc()'>
       Name:<br>
       <input type="text" name="Name" required="true" style="width: 50%;"> <br><br><br>
       Email (tufts e-mail):<br>
-      <input type="text" name="Email" required="true" style="width: 50%;"> <br><br><br>
+      <input type="text" name="Email" id="Email" required="true" style="width: 50%;"> <br><br><br>
+      School:<br>
+      <input type="text" name="School" id="School" required="true" style="width: 50%;"> <br><br><br>
       <input type="submit" value="Submit"> <br><br>
     </form>
 </div>
