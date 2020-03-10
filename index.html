@@ -23,7 +23,52 @@
         #coverphoto img {
           width:100%;
         }
+          #title {
+          font-size: 60px;
+          font-weight: 500;
+          color: #fff;
+        }
+        #smallerTitle {
+          font-size: 30px;
+          padding-top: 30px;
+          font-weight: 400;
+          color: #fff;
+        }
+        #arrow {
+          background-color: transparent;
+        }
+        #welcome {
+          background-color: #5a9ffc;
+          font-style: normal;
+        }
+        button {
+          background-color: #fc5a5a;
+          padding: 30px 100px;
+          text-align: center;
+          font-size: 20px;
+          display: inline-block;
+          color: white;
+          border: none;
+          border-radius: 50px;
+          transition: all 0.5s;
+          cursor: pointer;
 
+
+        }
+        button:hover {
+          background-color: #f6de64;
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 30px 30px 0 rgba(0,0,0,0.19);
+        }
+        .column-2 {
+          padding-top: 100px;
+          padding-bottom: 100px;
+          float: left;
+          width: 50%;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          background-color: #5a9ffc;
+        }
       </style>
   </head>
 
@@ -77,28 +122,42 @@
         sizes="(max-width: 540px) 100vw, (max-width: 768px)
         50vw, calc(1200px / 2)">
         <div class = "inside-image">
+          <div id = "welcome">
           Welcome
+          </div>
+          <div id = "arrow">
+            <span style = "font-style: normal;"> &#11015;</span>
+          </div>
         </div>
       </div>
 
-
-
-
-      <!-- the app imagery and class names can all be changed!
-          They're fillers-->
-    <div class="container-3">
+   <div class="container-3">
       <div class ="column">
         <img src=
         "sublet-logo-beige.jpg" style="width: 100%;">
-      </div>
-      <div class ="column">
-        <div class ="app-descript-1">
-          <div class="app-descript-2">
-            Finding a place to live, made easy.
-            Made for college students, by college students
-          </div>
+    </div>
+      <div class ="column-2">
+        <div id="title">
+        Finding a place to live,
+        <br>
+        made easy.
+        <br>
+        </div>
+        <div id="smallerTitle">
+        Sublet University is created for college students,
+        <br>
+        by college students.
+        <br>
+        <br>
+
+        Register with your email and start your search today!
+        <br>
+        <br>
+
+        <a href="login.html"> <button type="button"> Register </button>
         </div>
       </div>
     </div>
   </body>
+</html>
 </html>
