@@ -216,7 +216,6 @@ header::after {
   font-size: 100px;
   margin-top: 50px;
 
-  font-style: italic;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -232,7 +231,6 @@ header::after {
   font-size: 8vw;
   margin-top: 50px;
 
-  font-style: italic;
   position: absolute;
   top: 30%;
   left: 50%;
