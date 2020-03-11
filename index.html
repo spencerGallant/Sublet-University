@@ -152,18 +152,18 @@
 
       <script>
         jQuery($ => {
-        // The speed of the scroll in milliseconds
         const speed = 800;
-
+//         selects links w/ hashtags
         $('a[href*="#"]')
         .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
         .unbind('click.smoothScroll')
         .bind('click.smoothScroll', event => {
+//           finds the target, animates the scroll on click^
           const targetId = event.currentTarget.getAttribute('href').split('#')[1];
           const targetElement = document.getElementById(targetId);
             if (targetElement) {
               event.preventDefault();
-              $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed);
+              $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed); // animation of given speed (800)
               }
             });
         });
