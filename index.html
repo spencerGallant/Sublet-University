@@ -155,6 +155,7 @@
         const speed = 800;
 //         selects links w/ hashtags
         $('a[href*="#"]')
+          //finds the link being clicked on
         .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
         .unbind('click.smoothScroll')
         .bind('click.smoothScroll', event => {
